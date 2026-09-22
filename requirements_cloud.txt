@@ -1,0 +1,1 @@
+streamlit\npymupdf\npandas\nopenpyxl\nopenai\n
