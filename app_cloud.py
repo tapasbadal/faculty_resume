@@ -9,6 +9,7 @@ import pandas as pd
 import fitz  # PyMuPDF
 import streamlit as st
 
+
 # Optional AI layer
 try:
     from openai import OpenAI
@@ -23,8 +24,6 @@ except ImportError:
 
 DEFAULT_FOLDER = ""
 OUTPUT_FOLDER = "/tmp"
-
-
 
 # =========================================================
 # PDF EXTRACTION
@@ -1172,32 +1171,40 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .university-logo {
-        display: block;
-        height: auto;
+    .university-branding {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
         margin: 0 0 0.8rem 0;
-        max-width: min(420px, 100%);
-        width: 420px;
+        max-width: 560px;
     }
-    .university-header {
-        border-bottom: 4px solid #d71920;
-        color: #124c9e;
-        font-size: 1.35rem;
-        font-weight: 700;
-        letter-spacing: 0;
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.45rem;
+    .university-logo {
+        height: auto;
+        max-width: min(390px, 100%);
+        width: 390px;
+    }
+    .naac-logo {
+        border-left: 1px solid #777;
+        height: 64px;
+        padding-left: 1rem;
+        width: auto;
     }
     .app-title {
         color: #124c9e;
     }
     </style>
-    <img
-        class="university-logo"
-        src="https://www.bennett.edu.in/wp-content/uploads/2019/10/Bennett-University-logo1-.png"
-        alt="Bennett University"
-    />
-    <div class="university-header">Bennett University</div>
+    <div class="university-branding">
+        <img
+            class="university-logo"
+            src="https://www.bennett.edu.in/wp-content/themes/twentysixteen/images/bu-logo.jpg"
+            alt="Bennett University, The Times Group"
+        />
+        <img
+            class="naac-logo"
+            src="https://www.bennett.edu.in/wp-content/uploads/2025/01/NAAC-Logo-2025-webp-1.webp"
+            alt="NAAC A+ accredited university"
+        />
+    </div>
     """,
     unsafe_allow_html=True,
 )
