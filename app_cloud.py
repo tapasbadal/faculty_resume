@@ -1174,19 +1174,11 @@ st.markdown(
     .university-branding {
         align-items: center;
         display: flex;
-        gap: 1rem;
         margin: 0 0 0.8rem 0;
-        max-width: 560px;
-    }
-    .university-logo {
-        height: auto;
-        max-width: min(390px, 100%);
-        width: 390px;
+        max-width: 120px;
     }
     .naac-logo {
-        border-left: 1px solid #777;
-        height: 64px;
-        padding-left: 1rem;
+        height: 72px;
         width: auto;
     }
     .app-title {
@@ -1194,11 +1186,6 @@ st.markdown(
     }
     </style>
     <div class="university-branding">
-        <img
-            class="university-logo"
-            src="https://www.bennett.edu.in/wp-content/themes/twentysixteen/images/bu-logo.jpg"
-            alt="Bennett University, The Times Group"
-        />
         <img
             class="naac-logo"
             src="https://www.bennett.edu.in/wp-content/uploads/2025/01/NAAC-Logo-2025-webp-1.webp"
