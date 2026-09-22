@@ -1164,12 +1164,48 @@ def process_uploaded_files(uploaded_files, use_ai=False, model_name="gpt-5.6"):
 # =========================================================
 
 st.set_page_config(
-    page_title="Faculty CV Intelligence System",
+    page_title="Bennett University | Faculty CV Intelligence System",
     page_icon="🎓",
     layout="wide",
 )
 
-st.title("🎓 Faculty CV Intelligence System — Version 3")
+st.markdown(
+    """
+    <style>
+    .university-logo {
+        display: block;
+        height: auto;
+        margin: 0 0 0.8rem 0;
+        max-width: min(420px, 100%);
+        width: 420px;
+    }
+    .university-header {
+        border-bottom: 4px solid #d71920;
+        color: #124c9e;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.45rem;
+    }
+    .app-title {
+        color: #124c9e;
+    }
+    </style>
+    <img
+        class="university-logo"
+        src="https://www.bennett.edu.in/wp-content/uploads/2019/10/Bennett-University-logo1-.png"
+        alt="Bennett University"
+    />
+    <div class="university-header">Bennett University</div>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    '<h1 class="app-title">Faculty CV Intelligence System</h1>',
+    unsafe_allow_html=True,
+)
 
 st.caption(
     "PDF extraction + rule-based validation + optional AI verification"
@@ -1471,7 +1507,7 @@ if st.button("🔍 Scan Resumes", type="primary"):
 st.divider()
 
 st.caption(
-    "Version 3 uses deterministic extraction first and AI as a "
+    "The application uses deterministic extraction first and AI as a "
     "second-pass verifier. AI should not be treated as a substitute "
     "for human verification in recruitment decisions."
 )
